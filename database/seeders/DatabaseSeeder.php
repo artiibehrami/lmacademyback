@@ -14,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        public function run()
+{
+    $this->call(ScoreboardTableSeeder::class);
+}
+
         // Call other seeders or use factories directly here
 
         // Example: Seeding users using the factory

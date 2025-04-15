@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('user_lists', function (Blueprint $table) {
             $table->id();
+            $table->string('list_name');
             $table->timestamps();
         });
     }
@@ -22,6 +23,14 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_lists');
+       $startYear = 2020;
+       $endYear = 2025;
+      
+       for ($year = $startYear; $year <= $endYear; $year++) {
+        UserList::create([
+            'list_name' => 'Gjenerata ' . $year
+        ]);               
+       }
+       
     }
 };

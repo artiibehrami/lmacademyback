@@ -11,7 +11,13 @@ class CoursesTableSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        //
+    {   
+        $modules = [
+            'Moduli i përgjithshëm',
+            'Moduli i përgjithshëm',
+            'Moduli i përgjithshëm',
+            'Moduli i përgjithshëm',
+            'Moduli i përgjithshëm',
+        ];
     }
 }
